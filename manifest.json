@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "affilate-inject (BYOK — use at your own risk)",
+  "version": "0.1.0",
+  "description": "Bring-your-own-key affiliate code injector. Click-to-override only, never silent. Self-referral violates many programs' terms; use at your own risk.",
+  "permissions": ["declarativeNetRequest", "storage", "tabs"],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.de/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "affilate-inject",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.de/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

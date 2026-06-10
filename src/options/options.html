@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>affilate-inject — settings</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body { font: 14px/1.5 system-ui, sans-serif; max-width: 640px; margin: 32px auto; padding: 0 16px; }
+      h1 { font-size: 18px; }
+      .disclosure { background: #fff3cd; color: #664d03; border: 1px solid #ffe69c; border-radius: 8px; padding: 12px 14px; margin: 16px 0; }
+      .field { margin: 12px 0; }
+      label { display: block; font-weight: 600; margin-bottom: 4px; }
+      input[type="text"] { width: 100%; padding: 8px; border: 1px solid #888; border-radius: 6px; box-sizing: border-box; font: inherit; }
+      .ack { margin: 16px 0; display: flex; gap: 8px; align-items: flex-start; }
+      .saved { color: #15803d; font-size: 12px; height: 14px; }
+      code { background: #00000010; padding: 1px 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>affilate-inject — settings</h1>
+
+    <div class="disclosure">
+      <b>Use at your own risk.</b> This tool injects <b>your own</b> affiliate ids and,
+      on your explicit click, <b>overrides</b> any code already on the page (including a
+      content creator's). It never acts silently and does not try to evade fraud
+      detection. Earning affiliate commission on your own purchases ("self-referral")
+      violates the terms of Amazon and most affiliate programs and can lead to
+      <b>commission clawback and account termination</b>. You are responsible for how
+      you use it.
+    </div>
+
+    <p>Enter the affiliate ids you were issued by each program. They are stored only in
+      this browser (<code>chrome.storage.local</code>) and never sent anywhere except,
+      in future versions, to the affiliate networks' own APIs.</p>
+
+    <div id="fields"></div>
+
+    <label class="ack">
+      <input type="checkbox" id="ack" />
+      <span>I understand this overrides others' affiliate codes on my click and that
+        self-referral violates most programs' terms.</span>
+    </label>
+    <div class="saved" id="saved"></div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

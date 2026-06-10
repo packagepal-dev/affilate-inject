@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>affilate-inject</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body { font: 13px/1.45 system-ui, sans-serif; width: 320px; margin: 0; padding: 12px; }
+      h1 { font-size: 14px; margin: 0 0 8px; }
+      .disclosure { font-size: 11px; background: #fff3cd; color: #664d03; border: 1px solid #ffe69c; border-radius: 6px; padding: 8px; margin-bottom: 10px; }
+      #status { font-weight: 600; margin-bottom: 4px; }
+      #detail { margin-bottom: 10px; min-height: 32px; }
+      .warn { color: #b54708; }
+      button { font: inherit; padding: 7px 10px; border-radius: 6px; border: 1px solid #888; background: #f4f4f5; cursor: pointer; }
+      button:disabled { opacity: 0.5; cursor: default; }
+      .primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+      .row { display: flex; gap: 8px; align-items: center; }
+      .link { margin-top: 10px; font-size: 11px; }
+      a { color: #2563eb; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>affilate-inject</h1>
+    <div class="disclosure">
+      Overrides an existing affiliate code — including a creator's — with <b>your</b>
+      code, but <b>only when you click Apply</b>. Never silent. Earning commission on
+      your own purchases violates Amazon &amp; most programs' terms. Use at your own risk.
+    </div>
+    <div id="status">…</div>
+    <div id="detail"></div>
+    <div class="row">
+      <button id="apply" class="primary" disabled>Apply my code</button>
+      <button id="clear" disabled>Remove</button>
+    </div>
+    <div class="link"><a id="options">Manage affiliate ids &amp; settings →</a></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

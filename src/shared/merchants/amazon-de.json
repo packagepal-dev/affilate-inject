@@ -1,0 +1,11 @@
+{
+  "id": "amazon-de",
+  "name": "Amazon DE (amazon.de)",
+  "matches": ["*://*.amazon.de/*"],
+  "requestDomains": ["amazon.de"],
+  "strategy": "queryParam",
+  "param": "tag",
+  "userKeyField": "amazonTagDe",
+  "detectExistingParams": ["tag", "ascsubtag"],
+  "overrideExistingOnApply": true
+}

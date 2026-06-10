@@ -1,0 +1,11 @@
+{
+  "id": "amazon-uk",
+  "name": "Amazon UK (amazon.co.uk)",
+  "matches": ["*://*.amazon.co.uk/*"],
+  "requestDomains": ["amazon.co.uk"],
+  "strategy": "queryParam",
+  "param": "tag",
+  "userKeyField": "amazonTagUk",
+  "detectExistingParams": ["tag", "ascsubtag"],
+  "overrideExistingOnApply": true
+}
